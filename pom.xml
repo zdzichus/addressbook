@@ -6,12 +6,21 @@
   <packaging>war</packaging>
   
    <build>
+   
   	<plugins>
   		<plugin>
   			<groupId>org.mortbay.jetty</groupId>
   			<artifactId>jetty-maven-plugin</artifactId>
   			<version>8.1.2.v20120308</version>
   		</plugin>
+  		 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+        </configuration>
+    </plugin>
   	</plugins>
   </build>
   

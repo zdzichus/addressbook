@@ -10,6 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 public class AddressBookServlet extends HttpServlet {
         
         protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        	response.getWriter().println("Servlet Lives! Must work");
+        	response.getWriter().println("Servlet Lives! Must work forever");
         }
 }

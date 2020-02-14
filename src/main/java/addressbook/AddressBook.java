@@ -1,15 +1,21 @@
 package addressbook;
 
-public class AddressBook {
 
+import java.util.HashMap;
+import java.util.Map;
+
+public class AddressBook {
+	private Map<String, String> addressMap = new HashMap<String, String>();
+	
+	
 	public void addEntry(String firstName, String phone) {
-		// TODO Auto-generated method stub
+          addressMap.put(firstName, phone);  
 		
 	}
 
-	public String size() {
-		// TODO Auto-generated method stub
-		return null;
+	public int size() {
+		
+		return addressMap.size();
 	}
 
 }

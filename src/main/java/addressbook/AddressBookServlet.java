@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class AddressBookServlet extends HttpServlet {
+         AddressBook book = new AddressBook();
         
         protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         	
@@ -15,7 +16,7 @@ public class AddressBookServlet extends HttpServlet {
         	String phone = request.getParameter("phone");
         	
         	
-        	AddressBook book = new AddressBook();
+        	
         	book.addEntry(firstName, phone);
         	
         	response.getWriter().println("Added " + firstName + ", there are now " + book.size() + "entries" );

@@ -10,6 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 public class AddressBookServlet extends HttpServlet {
         
         protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        	response.getWriter().println("Servlet Lives! Must work forever");
+        	
+        	String firstName = request.getParameter("firstName");
+        	String phone = request.getParameter("phone");
+        	
+        	
+        	AddressBook book = new AddressBook();
+        	book.addEntry(firstName, phone);
+        	
+        	response.getWriter().println("Added " + firstName + ", there are now " + book.size() + "entries" );
         }
 }
